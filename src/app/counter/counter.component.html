@@ -1,0 +1,16 @@
+<div>
+    <h1>Counter</h1>
+    <div>
+        <div>
+            {{ count$ | async }}
+        </div>
+        <div>
+            <input type="number" placeholder="Reset to: " #to>
+        </div>
+        <div class='action'>
+            <button (click)='inc()'> INC</button>
+            <button (click)='dec()'> DEC</button>
+            <button (click)='reset(to.value || 0)'> RESET</button>
+        </div>
+    </div>
+</div>
